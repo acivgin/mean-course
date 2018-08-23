@@ -1,13 +1,13 @@
 <mat-card>
   <form (submit)="savePost(postForm)" #postForm="ngForm">
     <mat-form-field>
-      <input matInput type="text" #title="ngModel" ngModel name="title" required minlength="3">
+      <input matInput type="text" placeholder="Post Title" #title="ngModel" ngModel name="title" required minlength="3">
     </mat-form-field>
-    <mat-error *ngIf="title.invalid">Field is Required</mat-error>
+    <!-- <mat-error *ngIf="title.invalid">Field is Required</mat-error> -->
     <mat-form-field>
-      <textarea matInput rows="3" #content="ngModel"  ngModel name="content" required></textarea>
+      <textarea matInput rows="3" placeholder="Post Content" #content="ngModel"  ngModel name="content" required></textarea>
     </mat-form-field>
-    <mat-error *ngIf="content.invalid">Field is Required</mat-error>
+    <!-- <mat-error *ngIf="content.invalid">Field is Required</mat-error> -->
     <button type="submit" mat-raised-button color="primary" required>Save Post</button>
   </form>
 </mat-card>

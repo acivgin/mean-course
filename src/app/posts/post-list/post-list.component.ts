@@ -10,7 +10,7 @@ import { Subscription } from 'rxjs'; // used for avoid memory leak,
   styleUrls: ['./post-list.component.css']
 })
 
-export class PostListComponent implements OnInit, OnDestroy {ž
+export class PostListComponent implements OnInit, OnDestroy {
   private postsSubscription: Subscription;
   posts: Post[] = [];
   ngOnDestroy(): void {
